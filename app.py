@@ -20,7 +20,7 @@ def predict():
 
     output = prediction[0]
 
-    return render_template('index.html', prediction_text='Your gender is {}'.format(output))
+    return render_template('index.html', prediction_text='Predicted gender {}'.format(output))
 
 if __name__ == "__main__":
     app.run(debug=True)
