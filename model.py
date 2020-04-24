@@ -40,7 +40,7 @@ def write_data(raw_data):
             processed_data = pd.read_excel(write_processed_data_path)
             return processed_data
 
-def running_model(raw_data):
+def running_model(processed_data):
             train, test = train_test_split(processed_data, test_size = 0.2)
             features = ['Height', 'Weight', 'Shoe_Size']
             X_train = train[features]

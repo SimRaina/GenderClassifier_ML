@@ -12,9 +12,9 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}" method="post">
-    	<input  type="number" name="Height" placeholder="Enter Height (in cms)" required="required" min="1" max="300" />
-        <input  type="number" name="Weight" placeholder="Enter Weight (in Kg)" required="required" min="1" max="200" />
-		<input  type="number" name="Shoe_Size" placeholder="Enter Shoe Size (e.g. 40)" required="required" min="1" max="100"/>
+    	<input  type="text" name="Height" placeholder="Enter Height (in cms)" required="required" min="1" max="300" />
+        <input  type="text" name="Weight" placeholder="Enter Weight (in Kg)" required="required" min="1" max="200" />
+		<input  type="text" name="Shoe_Size" placeholder="Enter Shoe Size (e.g. 40)" required="required" min="1" max="100"/>
 
         <button type="submit" class="btn btn-primary">Predict</button>
     </form>
