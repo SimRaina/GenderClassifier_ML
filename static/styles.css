@@ -1,11 +1,14 @@
 body {
-  background-color: lightblue;
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
 }
 
-h1 {
-  color: green;
-  text-align: center;
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
 }
+
+
 div {
   width:1000px;
   height:500px;

@@ -2,27 +2,24 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
-  <title>ML API</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>ML Gender Classifier Model</title>
 </head>
 <body>
- <div class="section">
-	<h1>Gender Classifier</h1>
+   <div class="section">
+       <!-- Main Input For Receiving Query to our ML -->
+      <form action="{{ url_for('predict')}}" method="post">
+      	<input  type="text" name="Height" placeholder="Enter Height (in cms)" required="required" min="1" max="300" />
+          <input  type="text" name="Weight" placeholder="Enter Weight (in Kg)" required="required" min="1" max="200" />
+  		<input  type="text" name="Shoe_Size" placeholder="Enter Shoe Size (e.g. 40)" required="required" min="1" max="100"/>
 
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}" method="post">
-    	<input  type="text" name="Height" placeholder="Enter Height (in cms)" required="required" min="1" max="300" />
-        <input  type="text" name="Weight" placeholder="Enter Weight (in Kg)" required="required" min="1" max="200" />
-		<input  type="text" name="Shoe_Size" placeholder="Enter Shoe Size (e.g. 40)" required="required" min="1" max="100"/>
-
-        <button type="submit" class="btn btn-primary">Predict</button>
-    </form>
-   <br>
-   <br>
-   <p>
-   {{ prediction_text }}
-   </p>
- </div>
+          <button type="submit" class="btn btn-primary">Predict</button>
+      </form>
+     <br>
+     <br>
+     <p>
+     {{ prediction_text }}
+     </p>
+   </div>
 </body>
 </html>
